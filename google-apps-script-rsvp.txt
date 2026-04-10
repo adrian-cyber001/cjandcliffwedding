@@ -1,0 +1,15 @@
+function doPost(e) {
+  var sheet = SpreadsheetApp.openById("PASTE_YOUR_GOOGLE_SHEET_ID_HERE").getSheetByName("RSVP");
+  var data = e.parameter;
+
+  sheet.appendRow([
+    new Date(),
+    data.guest_name || "",
+    data.attendance || "",
+    data.guest_count || ""
+  ]);
+
+  return ContentService
+    .createTextOutput(JSON.stringify({ success: true, message: "RSVP saved" }))
+    .setMimeType(ContentService.MimeType.JSON);
+}

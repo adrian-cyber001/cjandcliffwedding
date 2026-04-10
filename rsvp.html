@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>RSVP | CJ &amp; Clifftine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="subpage">
+    <main class="page-wrap">
+        <section class="page-hero">
+            <img class="page-decor page-decor-left floating" src="img/flower-pink.png" alt="" aria-hidden="true">
+            <img class="page-decor page-decor-right floating" src="img/purple-butterfly.png" alt="" aria-hidden="true">
+            <p class="eyebrow">RSVP</p>
+            <h1>We Would Love To Celebrate With You</h1>
+            <p>Please confirm your attendance through the RSVP form.</p>
+        </section>
+
+        <section class="page-content">
+            <article class="paper-card center-card reveal-on-scroll">
+                <h2>Kindly send your response here</h2>
+                <p>Please let us know if you will be attending, and how many guests are coming with you.</p>
+                <form class="rsvp-form" id="customRsvpForm" data-script-url="https://script.google.com/macros/s/AKfycbz9ExQPQFg-iqPymm0yKrRuy8Rx49hCP9rk8O2Kc7eW7smZGiHB6Zzw_etWnKObtLoP/exec">
+
+                    <label class="form-field">
+                        <span>Your Name</span>
+                        <input type="text" name="guest_name" placeholder="Enter your full name" required>
+                    </label>
+
+                    <fieldset class="form-field form-field--choice">
+                        <legend>Will you attend the wedding?</legend>
+                        <label class="choice-pill">
+                            <input type="radio" name="attendance" value="Attending" checked>
+                            <span>Yes, I will attend</span>
+                        </label>
+                        <label class="choice-pill">
+                            <input type="radio" name="attendance" value="Not attending">
+                            <span>No, I cannot attend</span>
+                        </label>
+                    </fieldset>
+
+                    <label class="form-field" id="guestCountField">
+                        <span>How many people are coming?</span>
+                        <select name="guest_count">
+                            <option value="1">1 person</option>
+                            <option value="2">2 people</option>
+                            <option value="3">3 people</option>
+                            <option value="4">4 people</option>
+                            <option value="5+">5 or more</option>
+                        </select>
+                    </label>
+
+                    <button class="button-link" id="rsvpSubmitButton" type="submit">Send RSVP</button>
+                                        <p class="form-status" id="rsvpStatus" aria-live="polite"></p>
+                </form>
+            </article>
+
+            <a class="back-link" href="index.html#scrapbook">Back to the invitation</a>
+        </section>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>
